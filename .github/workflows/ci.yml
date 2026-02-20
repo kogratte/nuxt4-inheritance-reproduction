@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   ci-checks:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,11 +29,8 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile --ignore-scripts
-          pnpm add turbo --global
 
       - name: Run checks for all packages
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.ARTIFACTORY_NPM_TOKEN }}
         run: |
           pnpm --parallel -r postinstall
           pnpm -r nuxt typecheck
