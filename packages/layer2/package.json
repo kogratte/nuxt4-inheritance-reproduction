@@ -1,5 +1,5 @@
 {
-  "name": "layer1",
+  "name": "layer2",
   "type": "module",
   "version": "0.0.1",
   "main": "./nuxt.config.ts",
@@ -10,15 +10,19 @@
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "pretypecheck": "pnpm prepare",
+    "typecheck": "nuxt typecheck",
+    "prepare": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/eslint": "latest",
-    "@nuxtjs/i18n": "10.2.3",
     "@types/node": "^24.10.12",
     "eslint": "^10.0.0",
     "nuxt": "^4.3.1",
     "typescript": "^5.9.3",
     "vue": "latest"
+  },
+  "dependencies": {
+    "layer1": "workspace:^"
   }
 }
