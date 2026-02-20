@@ -9,7 +9,8 @@
     "build": "nuxt build .playground",
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
     "@nuxt/eslint": "latest",
@@ -18,5 +19,8 @@
     "nuxt": "^4.3.1",
     "typescript": "^5.9.3",
     "vue": "latest"
+  },
+  "dependencies": {
+    "layer1": "workspace:^"
   }
 }
